@@ -1,6 +1,6 @@
 {
   "product": "liteblog",
-  "company": "jicg",
+  "company": "Milo233",
   "license": "LICENSE",
   "upgrade-code": "7dd73fee-5feb-4f54-8b45-98336f6c78af",
   "files": {
@@ -31,9 +31,9 @@
 
   "choco": {
     "description": "轻博客",
-    "project-url": "https://github.com/jicg/liteblog",
+    "project-url": "https://github.com/Milo233/go-blog",
     "tags": "generate liteblog nuget",
-    "license-url": "https://github.com/jicg/liteblog/blob/master/LICENSE"
+    "license-url": "https://github.com/Milo233/liteblog/blob/master/LICENSE"
   },
   "hooks": [
     {

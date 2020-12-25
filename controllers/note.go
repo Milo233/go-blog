@@ -3,8 +3,8 @@ package controllers
 import (
 	"bytes"
 	"github.com/PuerkitoBio/goquery"
-	"github.com/jicg/go-blog/models"
-	"github.com/jicg/go-blog/syserrors"
+	"github.com/Milo233/go-blog/models"
+	"github.com/Milo233/go-blog/syserrors"
 	"github.com/jinzhu/gorm"
 	"strings"
 	"time"

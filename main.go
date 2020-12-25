@@ -1,12 +1,12 @@
 package main
 
 import (
-	_ "github.com/jicg/go-blog/routers"
-	_ "github.com/jicg/go-blog/models"
+	_ "github.com/Milo233/go-blog/routers"
+	_ "github.com/Milo233/go-blog/models"
 	"github.com/astaxie/beego"
 	"strings"
 	"encoding/gob"
-	"github.com/jicg/go-blog/models"
+	"github.com/Milo233/go-blog/models"
 	"os"
 	"github.com/astaxie/beego/logs"
 	"fmt"

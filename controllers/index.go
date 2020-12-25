@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/jicg/go-blog/syserrors"
+	"github.com/Milo233/go-blog/syserrors"
 	"fmt"
 	"errors"
 	"time"

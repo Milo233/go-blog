@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/jicg/go-blog/models"
+	"github.com/Milo233/go-blog/models"
 	"errors"
-	"github.com/jicg/go-blog/syserrors"
+	"github.com/Milo233/go-blog/syserrors"
 	"github.com/satori/go.uuid"
 )
 

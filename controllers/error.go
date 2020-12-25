@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	"github.com/jicg/go-blog/syserrors"
+	"github.com/Milo233/go-blog/syserrors"
 	"github.com/astaxie/beego/logs"
 )
 
