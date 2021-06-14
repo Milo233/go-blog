@@ -19,6 +19,11 @@
 =====
 ### 项目启动 安装bee，根目录 bee run
 
+
+配置文件在 conf/app.conf 里
+
+访问 http://localhost:6010
+
  https://beego.me/docs/install/bee.md
 您可以通过如下的方式安装 bee 工具：
 go get github.com/beego/bee
@@ -27,4 +32,8 @@ go get github.com/beego/bee
 如何添加环境变量，请自行搜索
 如果你本机设置了 GOBIN，那么上面的命令就会安装到 GOBIN 下，请添加 GOBIN 到你的环境变量中
 https://www.jianshu.com/nb/27703855
+
+设置代理，加速安装相关包
+$ export GO111MODULE=on
+$ export GOPROXY=https://goproxy.cn
 

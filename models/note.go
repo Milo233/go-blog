@@ -20,6 +20,7 @@ type Note struct {
 	Visit   int    `gorm:"default:0"`
 	Praise  int    `gorm:"default:0"`
 	Open  int
+	Type string
 //	给字段设置default的值的时候，如果插入的时候，字段值和上面给的默认值相等，就不会插入这个字段，让数据库自动写入这个数据 跪了。。
 }
 
