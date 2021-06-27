@@ -1,22 +1,28 @@
 package main
 
 import (
-	_ "github.com/Milo233/go-blog/routers"
-	_ "github.com/Milo233/go-blog/models"
-	"github.com/astaxie/beego"
-	"strings"
 	"encoding/gob"
-	"github.com/Milo233/go-blog/models"
-	"os"
-	"github.com/astaxie/beego/logs"
-	"fmt"
 	"encoding/json"
+	"fmt"
+	"time"
+	"github.com/Milo233/go-blog/models"
+	_ "github.com/Milo233/go-blog/models"
+	_ "github.com/Milo233/go-blog/routers"
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
+	"log"
+	"net"
+	"os"
+	"os/exec"
+	"runtime"
+	"strings"
 )
 
 func main() {
 	initLog()
 	initSession()
 	initTemplate()
+	openBrowser()
 	beego.Run()
 }
 func initLog() {
@@ -61,4 +67,43 @@ func initTemplate() {
 		return string(bs)
 	})
 
+}
+
+func openBrowser() {
+	fmt.Println("start ... ")
+	time.Sleep(1 * time.Second)
+	url := "http://" + GetOutboundIP() + ":6010"
+	fmt.Println("Running at " + url)
+	err := open(url)
+	if err != nil {
+		fmt.Println("failed to open browser!")
+	}
+}
+
+func open(url string) error {
+	var cmd string
+	var args []string
+
+	switch runtime.GOOS {
+	case "windows":
+		cmd = "cmd"
+		args = []string{"/c", "start"}
+	case "darwin":
+		cmd = "open"
+	default: // "linux", "freebsd", "openbsd", "netbsd"
+		cmd = "xdg-open"
+	}
+	args = append(args, url)
+	return exec.Command(cmd, args...).Start()
+}
+
+func GetOutboundIP() string {
+	conn, err := net.Dial("udp", "8.8.8.8:80")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer conn.Close()
+
+	localAddr := conn.LocalAddr().(*net.UDPAddr)
+	return localAddr.IP.String()
 }
