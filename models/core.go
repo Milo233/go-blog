@@ -76,8 +76,9 @@ func initDB() error {
 	case "mysql":
 		db, err = gorm.Open("mysql", dbconf["url"])
 	default: // fixme read from env config file
-		db, err = gorm.Open("sqlite3", "data/data.db")
-
+		// 原来写死了读的data文件夹下的data.db 
+		// db, err = gorm.Open("sqlite3", "data/data.db")
+		db, err = gorm.Open("sqlite3", dbconf["url"])
 	}
 	if err != nil {
 		return err

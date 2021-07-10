@@ -21,6 +21,7 @@
 
 
 配置文件在 conf/app.conf 里
+数据库用的是url里的 data.db
 
 访问 http://localhost:6010
 
@@ -37,3 +38,4 @@ https://www.jianshu.com/nb/27703855
 $ export GO111MODULE=on
 $ export GOPROXY=https://goproxy.cn
 
+windows 设置go环境变量 go env -w GO111MODULE=on
