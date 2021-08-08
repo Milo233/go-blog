@@ -1,10 +1,8 @@
 /**
-
  @Name：layui.blog 闲言轻博客模块
  @Author：徐志文
  @License：MIT
  @Site：http://www.layui.com/template/xianyan/
-
  */
 layui.define(['element', 'form', 'laypage', 'jquery', 'laytpl', 'sysn'], function (exports) {
     var element = layui.element
@@ -197,7 +195,7 @@ layui.define(['element', 'form', 'laypage', 'jquery', 'laytpl', 'sysn'], functio
                 var view = $('#LAY-msg-tpl').html()
                     , data = {
                     username: toText(ret.data.user.name)
-                    , avatar: ret.data.user.avatar || '/static/images/info-img.png'
+                    , avatar: ret.data.user.avatar || '/static/images/go.ico'
                     , praise: ret.data.praise
                     , content: toText(ret.data.content)
                     , key: ret.data.key

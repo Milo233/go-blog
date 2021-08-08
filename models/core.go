@@ -56,7 +56,7 @@ func init() {
 			//密码
 			Pwd: "123123",
 			//头像地址
-			Avatar: "/static/images/info-img.png",
+			Avatar: "/static/images/go.ico",
 			//是否认证 例： lyblog 作者
 			Role: 0,
 		})

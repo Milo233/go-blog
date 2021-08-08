@@ -32,7 +32,7 @@
             </ul>
         {{/*{{if .IsLogin}} # {{else}} /user {{end}}*/}}
             <a href="/user" style="color:#fff;max-width: 120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" class="personal pull-left">
-                <span><i style="color: #fff;" class="layui-icon {{if .IsLogin}}  {{else}} layui-icon-username {{end}} ">{{.User.Name}}</i></span>
+                <span><i id="userName" style="color: #fff;" class="layui-icon {{if .IsLogin}}  {{else}} layui-icon-username {{end}} ">{{.User.Name}}</i></span>
 
             </a>
         </div>
